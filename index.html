@@ -1,89 +1,307 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gestão de Escala de Trabalho | SaaS</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Gestão de Escala de Trabalho, sem dor de cabeça</h1>
-    <p>Automatize escalas, evite erros e mantenha conformidade com a CLT.</p>
-    <a href="#solucao" class="btn">Conhecer a solução</a>
-  </header>
-
-  <!-- PROBLEMA -->
-  <section class="section">
-    <h2>O problema hoje</h2>
-    <p>
-      Muitas empresas ainda fazem a gestão de escala usando Excel, papel ou WhatsApp.
-      Isso gera erros, conflitos de horário, descumprimento da CLT e muito retrabalho.
-    </p>
-
-    <ul class="list">
-      <li>❌ Erros em folgas e horas extras</li>
-      <li>❌ Conflitos de horário</li>
-      <li>❌ Risco jurídico</li>
-      <li>❌ Tempo perdido com ajustes manuais</li>
-    </ul>
-  </section>
-
-  <!-- SOLUÇÃO -->
-  <section class="section dark" id="solucao">
-    <h2>A solução</h2>
-    <p>
-      Um SaaS que automatiza a criação e o controle de escalas de trabalho,
-      garantindo organização, previsibilidade e conformidade legal.
-    </p>
-
-    <ul class="list">
-      <li>✅ Montagem automática de escalas</li>
-      <li>✅ Validação de conflitos</li>
-      <li>✅ Controle de carga horária</li>
-      <li>✅ Redução de erros humanos</li>
-    </ul>
-  </section>
-
-  <!-- MVP -->
-  <section class="section">
-    <h2>MVP – Funcionalidades iniciais</h2>
-
-    <div class="cards">
-      <div class="card">Cadastro de funcionários</div>
-      <div class="card">Definição de jornadas (6x1, 5x2, 12x36)</div>
-      <div class="card">Geração de escala semanal e mensal</div>
-      <div class="card">Visualização por funcionário</div>
-    </div>
-  </section>
-
-  <!-- RESULTADO -->
-  <section class="section dark">
-    <h2>O resultado para a empresa</h2>
-
-    <ul class="list">
-      <li>📉 Menos erros e retrabalho</li>
-      <li>⚖️ Conformidade com a CLT</li>
-      <li>⏱️ Economia de tempo</li>
-      <li>📊 Mais controle e organização</li>
-    </ul>
-  </section>
-
-  <!-- CTA -->
-  <footer class="footer">
-    <h2>Profissionalize a gestão de escala</h2>
-    <p>Transforme um processo caótico em algo simples e automatizado.</p>
-   <a 
-  href="https://wa.me/557193256978" 
-  class="btn btn-whatsapp" 
-  target="_blank"
->
-  Entrar em contato no WhatsApp
-</a>
-
-  </footer>
-
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 45012f46147417ba51b3610ed5f45c4dc93fef97..3161118e653b7fc94a38ea1a5a9118c761d5ec5e 100644
+--- a/index.html
++++ b/index.html
+@@ -1,89 +1,229 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+-  <title>Gestão de Escala de Trabalho | SaaS</title>
++  <title>EscalaSystem | Painel Inicial</title>
+   <link rel="stylesheet" href="style.css"/>
+ </head>
+ <body>
++  <div class="app">
++    <aside class="sidebar">
++      <div class="brand">
++        <div class="logo">
++          <svg viewBox="0 0 64 64" aria-hidden="true">
++            <defs>
++              <linearGradient id="calGrad" x1="0" y1="0" x2="1" y2="1">
++                <stop offset="0" stop-color="#b076ff" />
++                <stop offset="1" stop-color="#7c3aed" />
++              </linearGradient>
++            </defs>
++            <rect x="8" y="10" width="48" height="46" rx="12" fill="url(#calGrad)"/>
++            <rect x="12" y="18" width="40" height="30" rx="8" fill="#f5f3ff"/>
++            <rect x="16" y="26" width="6" height="6" rx="2" fill="#a855f7"/>
++            <rect x="26" y="26" width="6" height="6" rx="2" fill="#a855f7"/>
++            <rect x="36" y="26" width="6" height="6" rx="2" fill="#a855f7"/>
++            <rect x="16" y="36" width="6" height="6" rx="2" fill="#a855f7"/>
++            <rect x="26" y="36" width="6" height="6" rx="2" fill="#a855f7"/>
++            <rect x="36" y="36" width="6" height="6" rx="2" fill="#a855f7"/>
++            <rect x="20" y="6" width="6" height="8" rx="3" fill="#e9d5ff"/>
++            <rect x="38" y="6" width="6" height="8" rx="3" fill="#e9d5ff"/>
++          </svg>
++        </div>
++        <div class="brand-text">
++          <span>Escala</span><strong>System</strong>
++          <small>Gestão inteligente de escalas</small>
++        </div>
++      </div>
+ 
+-  <!-- HERO -->
+-  <header class="hero">
+-    <h1>Gestão de Escala de Trabalho, sem dor de cabeça</h1>
+-    <p>Automatize escalas, evite erros e mantenha conformidade com a CLT.</p>
+-    <a href="#solucao" class="btn">Conhecer a solução</a>
+-  </header>
++      <nav class="menu">
++        <p class="menu-title">Acesso rápido</p>
++        <a class="menu-item active" href="#">Início</a>
++        <a class="menu-item" href="#">Escalas de trabalho</a>
++        <a class="menu-item" href="#">Registro de ponto</a>
++        <a class="menu-item" href="#">Jornada &amp; horas</a>
+ 
+-  <!-- PROBLEMA -->
+-  <section class="section">
+-    <h2>O problema hoje</h2>
+-    <p>
+-      Muitas empresas ainda fazem a gestão de escala usando Excel, papel ou WhatsApp.
+-      Isso gera erros, conflitos de horário, descumprimento da CLT e muito retrabalho.
+-    </p>
++        <p class="menu-title">Gestão</p>
++        <a class="menu-item" href="#">Relatórios</a>
++        <a class="menu-item" href="#">Colaboradores</a>
++        <a class="menu-item" href="#">Equipes</a>
++        <a class="menu-item" href="#">Unidades</a>
++        <a class="menu-item" href="#">Solicitações</a>
++        <a class="menu-item" href="#">Fechamento de ponto</a>
++      </nav>
+ 
+-    <ul class="list">
+-      <li>❌ Erros em folgas e horas extras</li>
+-      <li>❌ Conflitos de horário</li>
+-      <li>❌ Risco jurídico</li>
+-      <li>❌ Tempo perdido com ajustes manuais</li>
+-    </ul>
+-  </section>
++      <div class="sidebar-cta">
++        <h4>Precisa de ajuda?</h4>
++        <p>Fale com nosso suporte e acelere sua implantação.</p>
++        <button class="btn btn-outline">Abrir chamado</button>
++      </div>
++    </aside>
+ 
+-  <!-- SOLUÇÃO -->
+-  <section class="section dark" id="solucao">
+-    <h2>A solução</h2>
+-    <p>
+-      Um SaaS que automatiza a criação e o controle de escalas de trabalho,
+-      garantindo organização, previsibilidade e conformidade legal.
+-    </p>
++    <main class="content">
++      <header class="topbar">
++        <div class="search">
++          <span class="icon">🔍</span>
++          <input type="text" placeholder="Pesquisar no sistema" />
++        </div>
++        <div class="topbar-actions">
++          <button class="icon-btn">🔔</button>
++          <button class="icon-btn">⚙️</button>
++          <div class="profile">
++            <div class="avatar">AM</div>
++            <div>
++              <p>Ana Martins</p>
++              <small>Gestora de RH</small>
++            </div>
++          </div>
++        </div>
++      </header>
+ 
+-    <ul class="list">
+-      <li>✅ Montagem automática de escalas</li>
+-      <li>✅ Validação de conflitos</li>
+-      <li>✅ Controle de carga horária</li>
+-      <li>✅ Redução de erros humanos</li>
+-    </ul>
+-  </section>
++      <section class="welcome">
++        <div>
++          <span class="badge">Bem-vindo de volta</span>
++          <h1>Central de operações da EscalaSystem</h1>
++          <p>Organize turnos, acompanhe indicadores e mantenha sua equipe sincronizada em poucos cliques.</p>
++        </div>
++        <div class="welcome-actions">
++          <button class="btn">Criar nova escala</button>
++          <button class="btn btn-secondary">Importar colaboradores</button>
++        </div>
++      </section>
+ 
+-  <!-- MVP -->
+-  <section class="section">
+-    <h2>MVP – Funcionalidades iniciais</h2>
++      <section class="stats">
++        <article class="stat-card">
++          <h3>Colaboradores ativos</h3>
++          <strong>248</strong>
++          <span class="chip up">+12% este mês</span>
++        </article>
++        <article class="stat-card">
++          <h3>Escalas publicadas</h3>
++          <strong>36</strong>
++          <span class="chip">Última atualização há 2h</span>
++        </article>
++        <article class="stat-card">
++          <h3>Conflitos detectados</h3>
++          <strong>3</strong>
++          <span class="chip warn">Revisão necessária</span>
++        </article>
++        <article class="stat-card">
++          <h3>Solicitações pendentes</h3>
++          <strong>9</strong>
++          <span class="chip">Trocas e ajustes</span>
++        </article>
++      </section>
+ 
+-    <div class="cards">
+-      <div class="card">Cadastro de funcionários</div>
+-      <div class="card">Definição de jornadas (6x1, 5x2, 12x36)</div>
+-      <div class="card">Geração de escala semanal e mensal</div>
+-      <div class="card">Visualização por funcionário</div>
+-    </div>
+-  </section>
++      <section class="grid">
++        <article class="panel">
++          <div class="panel-header">
++            <h2>Escala de hoje</h2>
++            <button class="link">Ver calendário</button>
++          </div>
++          <div class="timeline">
++            <div class="timeline-item">
++              <span class="time">06:00 - 12:00</span>
++              <div>
++                <h4>Equipe Operacional A</h4>
++                <p>12 colaboradores · Unidade Centro</p>
++              </div>
++              <span class="status success">Confirmada</span>
++            </div>
++            <div class="timeline-item">
++              <span class="time">12:00 - 18:00</span>
++              <div>
++                <h4>Equipe Operacional B</h4>
++                <p>10 colaboradores · Unidade Norte</p>
++              </div>
++              <span class="status info">Em ajuste</span>
++            </div>
++            <div class="timeline-item">
++              <span class="time">18:00 - 00:00</span>
++              <div>
++                <h4>Equipe Noturna</h4>
++                <p>8 colaboradores · Unidade Sul</p>
++              </div>
++              <span class="status pending">Pendente</span>
++            </div>
++          </div>
++        </article>
+ 
+-  <!-- RESULTADO -->
+-  <section class="section dark">
+-    <h2>O resultado para a empresa</h2>
++        <article class="panel">
++          <div class="panel-header">
++            <h2>Ações rápidas</h2>
++            <button class="link">Personalizar</button>
++          </div>
++          <div class="quick-actions">
++            <button class="action-card">📅 Planejar próxima semana</button>
++            <button class="action-card">🧾 Exportar relatório CLT</button>
++            <button class="action-card">👥 Aprovar solicitações</button>
++            <button class="action-card">✅ Validar jornada</button>
++          </div>
++          <div class="panel-footer">
++            <p>Integrações ativas:</p>
++            <div class="tags">
++              <span>Slack</span>
++              <span>Power BI</span>
++              <span>Google Calendar</span>
++            </div>
++          </div>
++        </article>
++      </section>
+ 
+-    <ul class="list">
+-      <li>📉 Menos erros e retrabalho</li>
+-      <li>⚖️ Conformidade com a CLT</li>
+-      <li>⏱️ Economia de tempo</li>
+-      <li>📊 Mais controle e organização</li>
+-    </ul>
+-  </section>
+-
+-  <!-- CTA -->
+-  <footer class="footer">
+-    <h2>Profissionalize a gestão de escala</h2>
+-    <p>Transforme um processo caótico em algo simples e automatizado.</p>
+-   <a 
+-  href="https://wa.me/557193256978" 
+-  class="btn btn-whatsapp" 
+-  target="_blank"
+->
+-  Entrar em contato no WhatsApp
+-</a>
+-
+-  </footer>
++      <section class="grid">
++        <article class="panel">
++          <div class="panel-header">
++            <h2>Status de conformidade</h2>
++            <button class="link">Detalhar</button>
++          </div>
++          <div class="progress-list">
++            <div>
++              <div class="progress-meta">
++                <span>Horas extras dentro do limite</span>
++                <span>78%</span>
++              </div>
++              <div class="progress-bar"><span style="width: 78%"></span></div>
++            </div>
++            <div>
++              <div class="progress-meta">
++                <span>Descanso semanal</span>
++                <span>92%</span>
++              </div>
++              <div class="progress-bar"><span style="width: 92%"></span></div>
++            </div>
++            <div>
++              <div class="progress-meta">
++                <span>Turnos aprovados</span>
++                <span>84%</span>
++              </div>
++              <div class="progress-bar"><span style="width: 84%"></span></div>
++            </div>
++          </div>
++        </article>
+ 
++        <article class="panel highlight">
++          <div class="panel-header">
++            <h2>Resumo semanal</h2>
++            <button class="link">Compartilhar</button>
++          </div>
++          <p class="summary">A semana está com 96% das escalas publicadas e apenas 3 conflitos ativos. Priorize os ajustes na unidade Norte.</p>
++          <div class="summary-cards">
++            <div>
++              <h4>Escalas</h4>
++              <strong>96%</strong>
++            </div>
++            <div>
++              <h4>Solicitações</h4>
++              <strong>14</strong>
++            </div>
++            <div>
++              <h4>Horas extras</h4>
++              <strong>2.4h</strong>
++            </div>
++          </div>
++          <button class="btn btn-secondary">Gerar relatório completo</button>
++        </article>
++      </section>
++    </main>
++  </div>
+ </body>
+ </html>
+ 
+EOF
+)
